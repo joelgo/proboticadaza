@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26/05/2015 10:45:33 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="probotica.modelo.entidad.Presentacion" table="PRESENTACION" schema="BOTICA" optimistic-lock="version">
+        <id name="idPresentacion" type="string">
+            <column name="ID_PRESENTACION" length="30" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombrepresentacion" type="string">
+            <column name="NOMBREPRESENTACION" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>

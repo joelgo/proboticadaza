@@ -1,0 +1,14 @@
+ <footer>
+     <div class="piecera">
+        &copy; DERECHOS RESERVADOS A LA BOTICA DAZA S.A.C 
+        Integrantes: Pedro Gomez Rengifo. Leidy Fernandez Cuichap. Robert Rengifo Cardenas.
+      <img src="recursos/img/logo3.jpg" width="20" height="20">
+      </div>
+
+ </footer> 
+
+     <script src="jquery/jquery-1.11.2.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+    <property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
+    <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
+    <property name="hibernate.connection.username">botica</property>
+    <property name="hibernate.connection.password">botica</property>
+    <mapping resource="probotica/modelo/pojos/Distribuidor.hbm.xml"/>
+    <mapping resource="probotica/modelo/pojos/Laboratorio.hbm.xml"/>
+    <mapping resource="probotica/modelo/pojos/TipoIngreso.hbm.xml"/>
+    <mapping resource="probotica/modelo/pojos/Presentacion.hbm.xml"/>
+    <mapping resource="probotica/modelo/pojos/Persona.hbm.xml"/>
+    <mapping resource="probotica/modelo/pojos/Comprobante.hbm.xml"/>
+    <mapping resource="probotica/modelo/pojos/Categoria.hbm.xml"/>
+    <mapping resource="probotica/modelo/pojos/UnidadMedida.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

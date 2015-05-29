@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26/05/2015 10:45:33 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="probotica.modelo.entidad.Distribuidor" table="DISTRIBUIDOR" schema="BOTICA" optimistic-lock="version">
+        <id name="iddistribuidor" type="string">
+            <column name="IDDISTRIBUIDOR" length="30" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombredistribuidor" type="string">
+            <column name="NOMBREDISTRIBUIDOR" length="100" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="DIRECCION" length="150" />
+        </property>
+        <property name="telefonoCelular" type="string">
+            <column name="TELEFONO_CELULAR" length="10" />
+        </property>
+        <property name="correo" type="string">
+            <column name="CORREO" length="150" />
+        </property>
+        <property name="estado" type="string">
+            <column name="ESTADO" length="1" />
+        </property>
+        <property name="ruc" type="string">
+            <column name="RUC" length="40" />
+        </property>
+    </class>
+</hibernate-mapping>
