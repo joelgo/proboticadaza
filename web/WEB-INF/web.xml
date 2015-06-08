@@ -1,56 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
-    <servlet>
-        <servlet-name>ServletJSP</servlet-name>
-        <servlet-class>ServletJSP.ServletJSP</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ServletAccion</servlet-name>
-        <servlet-class>ServletJSP.ServletAccion</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>CerrarSesionServlet</servlet-name>
-        <servlet-class>ServletJSP.CerrarSesionServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>MenuServlet</servlet-name>
-        <servlet-class>ServletJSP.MenuServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ValidarServlet</servlet-name>
-        <servlet-class>ServletJSP.ValidarServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>PersonaServlet</servlet-name>
-        <servlet-class>ServletJSP.PersonaServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ServletJSP</servlet-name>
-        <url-pattern>/SJSP.php</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ServletAccion</servlet-name>
-        <url-pattern>/SA.php</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>CerrarSesionServlet</servlet-name>
-        <url-pattern>/CSS.php</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>MenuServlet</servlet-name>
-        <url-pattern>/MS.php</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ValidarServlet</servlet-name>
-        <url-pattern>/VS.php</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>PersonaServlet</servlet-name>
-        <url-pattern>/PS.php</url-pattern>
-    </servlet-mapping>
+
     <session-config>
         <session-timeout>
-            30
+            15
         </session-timeout>
     </session-config>
+    <welcome-file-list>
+        <welcome-file>logeo.jsp</welcome-file>
+    </welcome-file-list>
 </web-app>

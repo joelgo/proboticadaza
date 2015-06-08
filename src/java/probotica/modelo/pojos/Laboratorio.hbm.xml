@@ -1,15 +1,17 @@
-<?xml version="1.0"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 26/05/2015 10:45:33 AM by Hibernate Tools 4.3.1 -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 07/06/2015 09:56:13 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="probotica.modelo.entidad.Laboratorio" table="LABORATORIO" schema="BOTICA" optimistic-lock="version">
-        <id name="idlaboratorio" type="string">
-            <column name="IDLABORATORIO" length="30" />
-            <generator class="assigned" />
-        </id>
-        <property name="nombrelaboratorio" type="string">
-            <column name="NOMBRELABORATORIO" length="70" />
-        </property>
-    </class>
+  <class name="probotica.modelo.entidad.Laboratorio" optimistic-lock="version" schema="FARMACIA" table="LABORATORIO">
+    <id name="idlaboratorio" type="string">
+      <column length="50" name="IDLABORATORIO"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="nombrelaboratorio" type="string">
+      <column length="70" name="NOMBRELABORATORIO"/>
+    </property>
+    <property name="estado" type="string">
+      <column length="1" name="ESTADO"/>
+    </property>
+  </class>
 </hibernate-mapping>

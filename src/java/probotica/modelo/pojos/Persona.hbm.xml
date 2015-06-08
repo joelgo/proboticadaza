@@ -1,30 +1,32 @@
-<?xml version="1.0"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 26/05/2015 10:45:33 AM by Hibernate Tools 4.3.1 -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 07/06/2015 09:56:13 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="probotica.modelo.entidad.Persona" table="PERSONA" schema="BOTICA" optimistic-lock="version">
-        <id name="idpersona" type="string">
-            <column name="IDPERSONA" length="30" />
-            <generator class="assigned" />
-        </id>
-        <property name="nombre" type="string">
-            <column name="NOMBRE" length="50" />
-        </property>
-        <property name="apellidoPat" type="string">
-            <column name="APELLIDO_PAT" length="50" />
-        </property>
-        <property name="apellidoMat" type="string">
-            <column name="APELLIDO_MAT" length="50" />
-        </property>
-        <property name="dni" type="string">
-            <column name="DNI" length="8" unique="true" />
-        </property>
-        <property name="genero" type="string">
-            <column name="GENERO" length="1" />
-        </property>
-        <property name="direccion" type="string">
-            <column name="DIRECCION" length="100" />
-        </property>
-    </class>
+  <class name="probotica.modelo.entidad.Persona" optimistic-lock="version" schema="FARMACIA" table="PERSONA">
+    <id name="idpersona" type="string">
+      <column length="50" name="IDPERSONA"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="nombre" type="string">
+      <column length="50" name="NOMBRE"/>
+    </property>
+    <property name="apellidoPat" type="string">
+      <column length="50" name="APELLIDO_PAT"/>
+    </property>
+    <property name="apellidoMat" type="string">
+      <column length="50" name="APELLIDO_MAT"/>
+    </property>
+    <property name="dni" type="string">
+      <column length="8" name="DNI" unique="true"/>
+    </property>
+    <property name="genero" type="string">
+      <column length="1" name="GENERO"/>
+    </property>
+    <property name="direccion" type="string">
+      <column length="100" name="DIRECCION"/>
+    </property>
+    <property name="telefonoCelular" type="string">
+      <column length="10" name="TELEFONO_CELULAR"/>
+    </property>
+  </class>
 </hibernate-mapping>

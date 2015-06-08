@@ -1,4 +1,3 @@
-<%@page import="probotica.modelo.entidad.PersonaUsuario"%>
 <%@page import="probotica.modelo.entidad.Persona"%>
 <%@page import="probotica.modelo.dao.impl.ProboticaDaoImpl"%>
 <%@page import="probotica.modelo.dao.ProboticaDao"%>
@@ -11,7 +10,7 @@
              
           
           
-            %>
+    %>
            
 
 <nav class="rep">
@@ -33,13 +32,13 @@
                 int count = 0;
                 ProboticaDao dao = new ProboticaDaoImpl();
 
-                for (PersonaUsuario personausuario : dao.listarPersona(persona)) {
+                for (Persona persona : dao.listarPersona()) {
                     count++;
                     
                  %>
                 <tr>
                   <td><%=count%>.-</td>
-                  <td><%=laboratorio.getNombrelaboratorio()%></td>
+                  <td><%=persona.getIdpersona()%></td>
                   <td>[<a href="">Actualizar</a>]</td>
                   <td>[<a href="inscripcion.jsp?">Eliminar</a>]</td>
                 </tr>

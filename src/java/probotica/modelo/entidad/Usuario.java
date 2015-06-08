@@ -10,20 +10,22 @@ package probotica.modelo.entidad;
  * @author USUARIO
  */
 public class Usuario {
-   private String idpersona; 
-   private String usuario;
-   private String password;
-   private String estado;
-
+    
+    private String idusuario;
+    private String usuario;
+    private String password;
+    private String estado;
+  
     public Usuario() {
+        
     }
 
-    public String getIdpersona() {
-        return idpersona;
+    public String getIdusuario() {
+        return idusuario;
     }
 
-    public void setIdpersona(String idpersona) {
-        this.idpersona = idpersona;
+    public void setIdusuario(String idusuario) {
+        this.idusuario = idusuario;
     }
 
     public String getUsuario() {
@@ -49,7 +51,7 @@ public class Usuario {
     public void setEstado(String estado) {
         this.estado = estado;
     }
+  
     
-   
     
 }

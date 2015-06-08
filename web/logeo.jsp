@@ -22,31 +22,31 @@ background-color: #FDDEF1;
       </div>
     </header>
 
-    	<form class="form-horizontal">
+  <form action="vr.php" method="POST" class="form-horizontal">
       <div class="form-group">
-           <label for="inputEmail3" class="col-sm-5 control-label">Usuario</label>
+           <label class="col-sm-5 control-label">Usuario</label>
          <div class="col-sm-3">
-            <input type="email" class="form-control" id="inputEmail3" placeholder="Usuario">
+            <input type="text" name="usuario" class="form-control" placeholder="Usuario">
         </div>
      </div>
      <div class="form-group">
-           <label for="inputPassword3" class="col-sm-5 control-label">Password</label>
+           <label class="col-sm-5 control-label">Password</label>
         <div class="col-sm-3">
-           <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+           <input type="password" name="password" class="form-control"  placeholder="Password">
         </div>
      </div>
       <div class="form-group">
         <div class="col-sm-offset-5 col-sm-3">
          <div class="checkbox">
             <label>
-                <input type="checkbox"> Recordar contraseña
+                <input type="checkbox">Recordar contraseña
             </label>
          </div>
         </div>
       </div>
      <div class="form-group">
        <div class="col-sm-offset-5 col-sm-3">
-         <a type="submit" class="btn btn-default" href="bienvenido.jsp">Entrar</a>
+           <input type="submit" value="Entrar">
        </div>
      </div>
    </form>

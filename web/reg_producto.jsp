@@ -1,3 +1,5 @@
+<%@page import="probotica.modelo.dao.impl.ProductoDaoImpl"%>
+<%@page import="probotica.modelo.dao.ProductoDao"%>
 <%@page import="probotica.modelo.entidad.Presentacion"%>
 <%@page import="probotica.modelo.entidad.Categoria"%>
 <%@page import="probotica.modelo.entidad.UnidadMedida"%>
@@ -15,7 +17,7 @@
 
 <%
     
-            ProboticaDao dao = new ProboticaDaoImpl();
+            ProductoDao dao = new ProductoDaoImpl();
            
             Producto producto = new Producto();
             
@@ -63,7 +65,7 @@
                 producto.setComposicion(composicion);
                 producto.setEstado("1");
                 
-                if (dao.registrarProducto(producto)) {
+                if (dao.registarProducto(producto)) {
                     response.sendRedirect("logeo.jsp");
                 } else {
                     mensaje = "No se pudo Inscribir al Asistente.";
@@ -91,7 +93,7 @@
                            <%
                                 for (UnidadMedida unidadmedida : dao.listarUnidadMedida()){
                                     
-                            %>
+                           %>
                        <option value="<%=unidadmedida.getIdUnidadmedida()%>"><%=unidadmedida.getUnidadmedida()%></option>
                       <%}%>
               </select> 

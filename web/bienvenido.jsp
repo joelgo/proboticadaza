@@ -1,5 +1,4 @@
 <%@include file="WEB-INF/jspf/top.jspf"%>
-
  <section>   
      <div class="bienvcar container">
             

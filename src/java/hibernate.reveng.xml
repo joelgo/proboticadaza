@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
 <hibernate-reverse-engineering>
-  <schema-selection match-schema="BOTICA"/>
-  <table-filter match-name="TIPO_INGRESO"/>
+  <schema-selection match-schema="FARMACIA"/>
   <table-filter match-name="PERSONA"/>
-  <table-filter match-name="PRESENTACION"/>
+  <table-filter match-name="UNIDAD_MEDIDA"/>
   <table-filter match-name="LABORATORIO"/>
+  <table-filter match-name="PRESENTACION"/>
+  <table-filter match-name="TIPO_INGRESO"/>
   <table-filter match-name="COMPROBANTE"/>
   <table-filter match-name="DISTRIBUIDOR"/>
-  <table-filter match-name="UNIDAD_MEDIDA"/>
   <table-filter match-name="CATEGORIA"/>
 </hibernate-reverse-engineering>

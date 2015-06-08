@@ -5,7 +5,7 @@
 <%@include file="WEB-INF/jspf/top.jspf"%>
 
 <%
-
+            
             ProboticaDao dao = new ProboticaDaoImpl();
             Persona persona = new Persona();
             Usuario usuario = new Usuario();
@@ -18,7 +18,7 @@
             String idpersona = request.getParameter("idpersona");
             idpersona = idpersona == null ? "" : idpersona;
             out.println("dni"+idpersona);
-            
+  
             String nombre = request.getParameter("nombre");
             nombre = nombre == null ? "" : nombre;
             out.println("nombre"+nombre);
@@ -46,12 +46,13 @@
             out.println("dni"+password);
             
             String opcion = request.getParameter("opcion");
-            opcion = opcion == null ? "" : opcion; // isrvepara poder validar si es que se va a inscribir o solo buscar
+            opcion = opcion == null ? "Buscar" : opcion; // isrvepara poder validar si es que se va a inscribir o solo buscar
             out.println("opcion"+opcion);
             String mensaje = "";
             String mensajeError = "";
-
-            
+           
+           
+            if(opcion.equals("Buscar")){
             if (!buscarDni.equals("")) {
                 persona = dao.buscarPersona(buscarDni);
                 if (persona!= null) {
@@ -59,16 +60,15 @@
                     nombre= persona.getNombre();
                     apellidoPat = persona.getApellidoPat();
                     apellidoMat=persona.getApellidoMat();
-                    dni = persona.getDni();                   
+                    dni = persona.getDni();
+                    opcion = "registrar";
                 } else {
                     mensaje = "La persona no tiene registro Registrar <a href='reg_persona.jsp'>aqui</a>";
                 }
 
-            }
-
-            if (opcion.equals("registar")) {
-                
-                usuario.setIdpersona(idpersona);
+             }
+            }  if (opcion.equals("registar")) {
+                usuario.setIdusuario(idpersona);
                 usuario.setUsuario(usuarioo);
                 usuario.setPassword(password);
                 usuario.setEstado("1");
@@ -78,13 +78,14 @@
                     mensajeError = "No se pudo Registrar al usuario debido a que ya existe"; 
                 }
             }
-
+            
            //oculta hidden
 %>
 <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-3 col-md-3"></div>
                 <div class="col-xs-12 col-sm-6 col-md-6 well">
+<%if(opcion.equals("Buscar")){%>
 <form action=" reg_usuario.jsp " method="post" class="form-horizontal">
    <table class="table table-condensed">
         <tr>
@@ -92,11 +93,15 @@
             <td><input type="text" name="buscarDni" placeholder="Ingrese su Dni"  class="form-control"></td>
             <td><input type="submit" value="Buscar"></td>
         </tr>
-        <tr>
+        
+        <tr>  
          <td colspan="3"><%=mensaje%></td>
         </tr> 
+        
    </table>    
 </form>
+        <%}%>
+        <%if(opcion.equals("registrar")){%>
 <form action=" reg_usuario.jsp " method="post" class="form-horizontal">
     <input type="hidden" name="idpersona" value="<%=idpersona%>" class="form-horizontal">
     <input type="hidden" name="opcion" value="registar" class="form-horizontal">
@@ -131,10 +136,11 @@
             <td colspan="2"><label><%=mensajeError%></label></td>
         </tr>
         <tr>
-            <td colspan="2"><input type="submit" class="btn btn-success" value="Guardar"></td>
+            <td colspan="2"><input type="submit" class="btn btn-success" value="Registrar"></td>
         </tr>
 </table>
 </form>
+        <%}%>
 </div> 
 <div class="col-xs-12 col-sm-3 col-md-3"></div>
 </div>

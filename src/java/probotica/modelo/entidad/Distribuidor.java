@@ -1,5 +1,5 @@
 package probotica.modelo.entidad;
-// Generated 26/05/2015 10:45:33 AM by Hibernate Tools 4.3.1
+// Generated 07/06/2015 09:56:10 PM by Hibernate Tools 4.3.1
 
 
 
@@ -14,25 +14,25 @@ public class Distribuidor  implements java.io.Serializable {
      private String direccion;
      private String telefonoCelular;
      private String correo;
-     private String estado;
      private String ruc;
+     private String estado;
 
     public Distribuidor() {
-        this.setIddistribuidor("");
+        this.iddistribuidor="";
     }
 
 	
     public Distribuidor(String iddistribuidor) {
         this.iddistribuidor = iddistribuidor;
     }
-    public Distribuidor(String iddistribuidor, String nombredistribuidor, String direccion, String telefonoCelular, String correo, String estado, String ruc) {
+    public Distribuidor(String iddistribuidor, String nombredistribuidor, String direccion, String telefonoCelular, String correo, String ruc, String estado) {
        this.iddistribuidor = iddistribuidor;
        this.nombredistribuidor = nombredistribuidor;
        this.direccion = direccion;
        this.telefonoCelular = telefonoCelular;
        this.correo = correo;
-       this.estado = estado;
        this.ruc = ruc;
+       this.estado = estado;
     }
    
     public String getIddistribuidor() {
@@ -70,19 +70,19 @@ public class Distribuidor  implements java.io.Serializable {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
-    public String getEstado() {
-        return this.estado;
-    }
-    
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
     public String getRuc() {
         return this.ruc;
     }
     
     public void setRuc(String ruc) {
         this.ruc = ruc;
+    }
+    public String getEstado() {
+        return this.estado;
+    }
+    
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
 

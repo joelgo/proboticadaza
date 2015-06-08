@@ -1,5 +1,5 @@
 package probotica.modelo.entidad;
-// Generated 26/05/2015 10:45:33 AM by Hibernate Tools 4.3.1
+// Generated 07/06/2015 09:56:10 PM by Hibernate Tools 4.3.1
 
 
 
@@ -16,16 +16,16 @@ public class Persona  implements java.io.Serializable {
      private String dni;
      private String genero;
      private String direccion;
+     private String telefonoCelular;
 
     public Persona() {
-        this.setIdpersona("");
     }
 
 	
     public Persona(String idpersona) {
         this.idpersona = idpersona;
     }
-    public Persona(String idpersona, String nombre, String apellidoPat, String apellidoMat, String dni, String genero, String direccion) {
+    public Persona(String idpersona, String nombre, String apellidoPat, String apellidoMat, String dni, String genero, String direccion, String telefonoCelular) {
        this.idpersona = idpersona;
        this.nombre = nombre;
        this.apellidoPat = apellidoPat;
@@ -33,6 +33,7 @@ public class Persona  implements java.io.Serializable {
        this.dni = dni;
        this.genero = genero;
        this.direccion = direccion;
+       this.telefonoCelular = telefonoCelular;
     }
    
     public String getIdpersona() {
@@ -83,6 +84,13 @@ public class Persona  implements java.io.Serializable {
     
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+    public String getTelefonoCelular() {
+        return this.telefonoCelular;
+    }
+    
+    public void setTelefonoCelular(String telefonoCelular) {
+        this.telefonoCelular = telefonoCelular;
     }
 
 

@@ -1,15 +1,14 @@
-<?xml version="1.0"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 26/05/2015 10:45:33 AM by Hibernate Tools 4.3.1 -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 07/06/2015 09:56:13 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="probotica.modelo.entidad.UnidadMedida" table="UNIDAD_MEDIDA" schema="BOTICA" optimistic-lock="version">
-        <id name="idUnidadmedida" type="string">
-            <column name="ID_UNIDADMEDIDA" length="30" />
-            <generator class="assigned" />
-        </id>
-        <property name="unidadmedida" type="string">
-            <column name="UNIDADMEDIDA" length="30" />
-        </property>
-    </class>
+  <class name="probotica.modelo.entidad.UnidadMedida" optimistic-lock="version" schema="FARMACIA" table="UNIDAD_MEDIDA">
+    <id name="idUnidadmedida" type="string">
+      <column length="50" name="ID_UNIDADMEDIDA"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="unidadmedida" type="string">
+      <column length="30" name="UNIDADMEDIDA"/>
+    </property>
+  </class>
 </hibernate-mapping>

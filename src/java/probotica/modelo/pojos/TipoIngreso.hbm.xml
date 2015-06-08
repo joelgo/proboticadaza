@@ -1,15 +1,14 @@
-<?xml version="1.0"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 26/05/2015 10:45:33 AM by Hibernate Tools 4.3.1 -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 07/06/2015 09:56:13 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="probotica.modelo.entidad.TipoIngreso" table="TIPO_INGRESO" schema="BOTICA" optimistic-lock="version">
-        <id name="idtipoingreso" type="string">
-            <column name="IDTIPOINGRESO" length="30" />
-            <generator class="assigned" />
-        </id>
-        <property name="nomtipoingreso" type="string">
-            <column name="NOMTIPOINGRESO" length="30" />
-        </property>
-    </class>
+  <class name="probotica.modelo.entidad.TipoIngreso" optimistic-lock="version" schema="FARMACIA" table="TIPO_INGRESO">
+    <id name="idtipoingreso" type="string">
+      <column length="50" name="IDTIPOINGRESO"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="nomtipoingreso" type="string">
+      <column length="30" name="NOMTIPOINGRESO"/>
+    </property>
+  </class>
 </hibernate-mapping>

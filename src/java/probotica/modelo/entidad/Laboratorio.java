@@ -1,5 +1,5 @@
 package probotica.modelo.entidad;
-// Generated 26/05/2015 10:45:33 AM by Hibernate Tools 4.3.1
+// Generated 07/06/2015 09:56:10 PM by Hibernate Tools 4.3.1
 
 
 
@@ -11,6 +11,7 @@ public class Laboratorio  implements java.io.Serializable {
 
      private String idlaboratorio;
      private String nombrelaboratorio;
+     private String estado;
 
     public Laboratorio() {
     }
@@ -19,9 +20,10 @@ public class Laboratorio  implements java.io.Serializable {
     public Laboratorio(String idlaboratorio) {
         this.idlaboratorio = idlaboratorio;
     }
-    public Laboratorio(String idlaboratorio, String nombrelaboratorio) {
+    public Laboratorio(String idlaboratorio, String nombrelaboratorio, String estado) {
        this.idlaboratorio = idlaboratorio;
        this.nombrelaboratorio = nombrelaboratorio;
+       this.estado = estado;
     }
    
     public String getIdlaboratorio() {
@@ -37,6 +39,13 @@ public class Laboratorio  implements java.io.Serializable {
     
     public void setNombrelaboratorio(String nombrelaboratorio) {
         this.nombrelaboratorio = nombrelaboratorio;
+    }
+    public String getEstado() {
+        return this.estado;
+    }
+    
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
 

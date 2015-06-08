@@ -232,7 +232,7 @@ public class ProboticaDaoImpl implements ProboticaDao{
     public boolean registrarUsuario(Usuario usuario) {
         Statement st = null;
         boolean flat = false;
-        String query ="insert into usuario(idpersona,usuario,password,estado) values ('"+usuario.getIdpersona()+"','"+usuario.getUsuario()+"','"+usuario.getPassword()+"','"+usuario.getEstado()+"')";
+        String query ="insert into usuario(idusuario,usuario,password,estado) values ('"+usuario.getIdusuario()+"','"+usuario.getUsuario()+"','"+usuario.getPassword()+"','"+usuario.getEstado()+"')";
         System.out.println(query);
         try {
             st = conecta().createStatement();
@@ -275,13 +275,55 @@ public class ProboticaDaoImpl implements ProboticaDao{
     public List<Producto> listarproducto() {
          throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
-    
-    
-    
-    
+
+    @Override
+    public boolean eliminarLaboratorio(Laboratorio laboratorio) {
+           boolean flat = false;
+        SessionFactory sf = null;
+        Session session = null;
+        Transaction transaction = null;
+        try {
+            sf = HibernateUtil.getSessionFactory();
+            session =  sf.openSession();
+            transaction = session.beginTransaction();
+            
+            Laboratorio cDelete = (Laboratorio)session.get(Laboratorio.class,laboratorio.getIdlaboratorio());
+            session.delete(cDelete);
+            transaction.commit();
+            session.close();
+            flat = true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            transaction.rollback();
+            session.close();
+            flat = false;
+        }
+        return flat;
     }
+
+    @Override
+    public Producto buscarproducto(String idproducto) {
+        Producto producto = null;
+        SessionFactory sf = null;
+        Session session = null;
+        try {
+            sf = HibernateUtil.getSessionFactory();
+            session = sf.openSession();
+            Query query = session.createQuery("FROM Producto WHERE idproducto='"+idproducto+"'");
+            producto = (Producto)query.uniqueResult();
+            session.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            session.close();
+        }
+       return producto;
+    }
+
+    @Override
+    public boolean actualizarLaboratorio(Laboratorio laboratorio) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+}
 
     
       

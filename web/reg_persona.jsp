@@ -13,22 +13,31 @@
              String idPersona = request.getParameter("idPersona"); idPersona= idPersona==null?"":idPersona;
              out.println(""+idPersona);
              String nombre = request.getParameter("nombre"); nombre= nombre==null?"":nombre;
+             out.println(""+nombre);
              String apellidoPat = request.getParameter("apellidoPat"); apellidoPat= apellidoPat==null?"":apellidoPat;
+             out.println(""+apellidoPat);
              String apellidoMat = request.getParameter("apellidoMat"); apellidoMat= apellidoMat==null?"":apellidoMat;
+             out.println(""+apellidoPat);
              String dni = request.getParameter("dni"); dni= dni==null?"":dni;
+             out.println(""+dni);
              String genero = request.getParameter("genero"); genero= genero==null?"":genero;
+             out.println(""+genero);
              String direccion = request.getParameter("direccion"); direccion= direccion==null?"":direccion;
+              out.println(""+direccion);
+             String telef_celular=request.getParameter("telef_celular"); telef_celular=telef_celular==null?"":telef_celular;
+             out.println(""+telef_celular);
+             
              String mensaje = "";
              
              if(!nombre.equals("") & !apellidoPat.equals("") & !apellidoMat.equals("") & !dni.equals("") & !genero.equals("") & !direccion.equals("")){
-             
-                 
+                 persona.setIdpersona("");
                  persona.setNombre(nombre);
                  persona.setApellidoPat(apellidoPat);
                  persona.setApellidoMat(apellidoMat);
                  persona.setDni(dni);
                  persona.setGenero(genero);
                  persona.setDireccion(direccion);
+                 persona.setTelefonoCelular(telef_celular);
 
                  if(dao.registarPersona(persona)){
                      response.sendRedirect("reg_persona.jsp");
@@ -74,7 +83,12 @@
          <tr>
             <td><label class="col-md-12">Dirección</label></td>
             <td><input type="text" name="direccion" placeholder= "Dirección" class="form-control" ></td>
+           
         </tr>
+        
+        <td><label class="col-md-12">telef/celular:</label></td>
+            <td><input type="text" name="telef_celular" placeholder= "telef_celular" class="form-control" ></td>
+        
         <tr>
             <td colspan="2"><label><%=mensaje%></label></td>
         </tr>

@@ -1,5 +1,5 @@
 package probotica.modelo.entidad;
-// Generated 26/05/2015 10:45:33 AM by Hibernate Tools 4.3.1
+// Generated 07/06/2015 09:56:10 PM by Hibernate Tools 4.3.1
 
 
 

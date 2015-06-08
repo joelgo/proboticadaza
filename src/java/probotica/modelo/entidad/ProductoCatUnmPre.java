@@ -5,25 +5,25 @@
  */
 package probotica.modelo.entidad;
 
-/**
- *
- * @author USUARIO
- */
-public class Producto implements java.io.Serializable {
-    
-    private String idproducto;
-    private String idcategoria;
-    private String id_presentacion;
-    private String nombreproducto;
-    private String concentracion;
-    private String id_unidadmedida;
-    private String precio_unitario;
-    private String composicion;
-    private String Stock_minimo;
-    private String Stock_actual;
-    private String estado;
 
-    public Producto() {
+public class ProductoCatUnmPre {
+  
+   private String idproducto;
+   private String idcategoria;
+   private String nombrecategoria;
+   private String id_presentacion;
+   private String nombrepresentacion;
+   private String nombreproducto;
+   private String concentracion;
+   private String id_unidadmedida;
+   private String unidadmedida;
+   private String precio_unitario;
+   private String composicion;
+   private String Stock_minimo;
+   
+   private String estado;
+
+    public ProductoCatUnmPre() {
     }
 
     public String getIdproducto() {
@@ -42,12 +42,28 @@ public class Producto implements java.io.Serializable {
         this.idcategoria = idcategoria;
     }
 
+    public String getNombrecategoria() {
+        return nombrecategoria;
+    }
+
+    public void setNombrecategoria(String nombrecategoria) {
+        this.nombrecategoria = nombrecategoria;
+    }
+
     public String getId_presentacion() {
         return id_presentacion;
     }
 
     public void setId_presentacion(String id_presentacion) {
         this.id_presentacion = id_presentacion;
+    }
+
+    public String getNombrepresentacion() {
+        return nombrepresentacion;
+    }
+
+    public void setNombrepresentacion(String nombrepresentacion) {
+        this.nombrepresentacion = nombrepresentacion;
     }
 
     public String getNombreproducto() {
@@ -74,6 +90,14 @@ public class Producto implements java.io.Serializable {
         this.id_unidadmedida = id_unidadmedida;
     }
 
+    public String getUnidadmedida() {
+        return unidadmedida;
+    }
+
+    public void setUnidadmedida(String unidadmedida) {
+        this.unidadmedida = unidadmedida;
+    }
+
     public String getPrecio_unitario() {
         return precio_unitario;
     }
@@ -98,14 +122,6 @@ public class Producto implements java.io.Serializable {
         this.Stock_minimo = Stock_minimo;
     }
 
-    public String getStock_actual() {
-        return Stock_actual;
-    }
-
-    public void setStock_actual(String Stock_actual) {
-        this.Stock_actual = Stock_actual;
-    }
-
     public String getEstado() {
         return estado;
     }
@@ -113,7 +129,6 @@ public class Producto implements java.io.Serializable {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-    
     
     
     
