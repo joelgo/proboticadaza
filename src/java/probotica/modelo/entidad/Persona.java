@@ -19,6 +19,7 @@ public class Persona  implements java.io.Serializable {
      private String telefonoCelular;
 
     public Persona() {
+        
     }
 
 	

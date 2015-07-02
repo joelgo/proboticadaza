@@ -278,7 +278,7 @@ public class ProboticaDaoImpl implements ProboticaDao{
 
     @Override
     public boolean eliminarLaboratorio(Laboratorio laboratorio) {
-           boolean flat = false;
+        boolean flat = false;
         SessionFactory sf = null;
         Session session = null;
         Transaction transaction = null;
@@ -319,10 +319,10 @@ public class ProboticaDaoImpl implements ProboticaDao{
        return producto;
     }
 
-    @Override
-    public boolean actualizarLaboratorio(Laboratorio laboratorio) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
+    
+
+
 }
 
     

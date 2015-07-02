@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package probotica.modelo.entidad;
 
 
-public class ProductoCatUnmPre {
-  
+public class listproing {
    private String idproducto;
    private String idcategoria;
    private String nombrecategoria;
@@ -17,12 +12,19 @@ public class ProductoCatUnmPre {
    private String concentracion;
    private String id_unidadmedida;
    private String unidadmedida;
-   private String precio_unitario;
-   private String composicion;
-   private String Stock_minimo;
+   private String precio_ingreso;
+   private String fecha_vencimiento;
+   private String cantidad_unidades;
+   private String descuento;
+   private String idlote;
+   private String nombrelaboratorio;
+   private String idlaboratorio;
+   private String idingreso;
+   private String subtotal;
+   private String TOTAL;
    private String estado;
 
-    public ProductoCatUnmPre() {
+    public listproing() {
     }
 
     public String getIdproducto() {
@@ -97,28 +99,68 @@ public class ProductoCatUnmPre {
         this.unidadmedida = unidadmedida;
     }
 
-    public String getPrecio_unitario() {
-        return precio_unitario;
+    public String getPrecio_ingreso() {
+        return precio_ingreso;
     }
 
-    public void setPrecio_unitario(String precio_unitario) {
-        this.precio_unitario = precio_unitario;
+    public void setPrecio_ingreso(String precio_ingreso) {
+        this.precio_ingreso = precio_ingreso;
     }
 
-    public String getComposicion() {
-        return composicion;
+    public String getFecha_vencimiento() {
+        return fecha_vencimiento;
     }
 
-    public void setComposicion(String composicion) {
-        this.composicion = composicion;
+    public void setFecha_vencimiento(String fecha_vencimiento) {
+        this.fecha_vencimiento = fecha_vencimiento;
     }
 
-    public String getStock_minimo() {
-        return Stock_minimo;
+    public String getCantidad_unidades() {
+        return cantidad_unidades;
     }
 
-    public void setStock_minimo(String Stock_minimo) {
-        this.Stock_minimo = Stock_minimo;
+    public void setCantidad_unidades(String cantidad_unidades) {
+        this.cantidad_unidades = cantidad_unidades;
+    }
+
+    public String getDescuento() {
+        return descuento;
+    }
+
+    public void setDescuento(String descuento) {
+        this.descuento = descuento;
+    }
+
+    public String getIdlote() {
+        return idlote;
+    }
+
+    public void setIdlote(String idlote) {
+        this.idlote = idlote;
+    }
+
+    public String getNombrelaboratorio() {
+        return nombrelaboratorio;
+    }
+
+    public void setNombrelaboratorio(String nombrelaboratorio) {
+        this.nombrelaboratorio = nombrelaboratorio;
+    }
+
+    public String getIdlaboratorio() {
+        return idlaboratorio;
+    }
+
+    public void setIdlaboratorio(String idlaboratorio) {
+        this.idlaboratorio = idlaboratorio;
+    }
+
+    public String getIdingreso() {
+        return idingreso;
+    }
+
+    public void setIdingreso(String idingreso) {
+        this.idingreso = idingreso;
     }
 
     public String getEstado() {
@@ -128,6 +170,23 @@ public class ProductoCatUnmPre {
     public void setEstado(String estado) {
         this.estado = estado;
     }
+
+    public String getSubtotal() {
+        return subtotal;
+    }
+
+    public void setSubtotal(String subtotal) {
+        this.subtotal = subtotal;
+    }
+
+    public String getTOTAL() {
+        return TOTAL;
+    }
+
+    public void setTOTAL(String TOTAL) {
+        this.TOTAL = TOTAL;
+    }
+    
     
     
     

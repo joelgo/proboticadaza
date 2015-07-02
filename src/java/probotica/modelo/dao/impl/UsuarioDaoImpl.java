@@ -80,8 +80,8 @@ public class UsuarioDaoImpl implements UsuarioDao{
             st=abrirConexion().createStatement();
             rs=st.executeQuery(query);
             
-            if(rs.next()){
-                usuario= new Usuario(); // pro que aki si cumplee y nos permite inicializarr aquii
+         if(rs.next()){
+                usuario=new Usuario(); // pro que aki si cumplee y nos permite inicializarr aquii
                 usuario.setIdusuario(rs.getString("idusuario"));
                usuario.setUsuario(rs.getString("usuario"));
                usuario.setPassword(rs.getString("password"));

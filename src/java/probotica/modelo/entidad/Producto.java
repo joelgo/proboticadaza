@@ -16,11 +16,19 @@ public class Producto implements java.io.Serializable {
     private String id_presentacion;
     private String nombreproducto;
     private String concentracion;
+    
+    private String unidadmedida;
+    
+    private String presentacion;
+    
+    private String nombrecategoria;
+    
     private String id_unidadmedida;
     private String precio_unitario;
     private String composicion;
     private String Stock_minimo;
     private String Stock_actual;
+    private String idusuario;
     private String estado;
 
     public Producto() {
@@ -112,6 +120,38 @@ public class Producto implements java.io.Serializable {
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public String getIdusuario() {
+        return idusuario;
+    }
+
+    public void setIdusuario(String idusuario) {
+        this.idusuario = idusuario;
+    }
+
+    public String getUnidadmedida() {
+        return unidadmedida;
+    }
+
+    public void setUnidadmedida(String unidadmedida) {
+        this.unidadmedida = unidadmedida;
+    }
+
+    public String getPresentacion() {
+        return presentacion;
+    }
+
+    public void setPresentacion(String presentacion) {
+        this.presentacion = presentacion;
+    }
+
+    public String getNombrecategoria() {
+        return nombrecategoria;
+    }
+
+    public void setNombrecategoria(String nombrecategoria) {
+        this.nombrecategoria = nombrecategoria;
     }
     
     

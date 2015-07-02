@@ -36,6 +36,9 @@ public class Cerrar extends HttpServlet {
         session.removeAttribute("idusuario");
         
         request.getRequestDispatcher("logeo.jsp").forward(request, response);
+        
+       
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

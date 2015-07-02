@@ -16,6 +16,7 @@ import probotica.modelo.dao.impl.ProductoDaoImpl;
 import probotica.modelo.dao.impl.UsuarioDaoImpl;
 import probotica.modelo.entidad.Ingreso;
 import probotica.modelo.entidad.Laboratorio;
+import probotica.modelo.entidad.Lote;
 import probotica.modelo.entidad.Persona;
 import probotica.modelo.entidad.Producto;
 import probotica.modelo.entidad.ProductoCatUnmPre;
@@ -33,7 +34,9 @@ public class consola {
         //c.Update();
         //c.ActualizarProducto();
         //c.registrarIngreso();
-        c.validar();
+        //c.ejecutarprocedimiento();
+        //c.validar();
+        c.ejecutarprocedimiento2();
     }
 public void insertarproducto(){
     ProboticaDao dao=new ProboticaDaoImpl();
@@ -81,18 +84,18 @@ public void buscarDni(String dni){
        
       public void ActualizarProducto(){
         ProductoDao productoDao = new ProductoDaoImpl();
-        ProductoCatUnmPre productocatunmpre = new ProductoCatUnmPre();
+        Producto  producto = new Producto ();
         
-        productocatunmpre.setIdproducto("Prod-0306201516283876");
-        productocatunmpre.setNombreproducto("Amoxicilina");
-        productocatunmpre.setConcentracion("125");
-        productocatunmpre.setId_unidadmedida("UNID-0005");
-        productocatunmpre.setId_presentacion("PRE-00001");
-        productocatunmpre.setPrecio_unitario("2.80");
-        productocatunmpre.setStock_minimo("5");
+        producto.setIdproducto("Prod-0306201516283876");
+        producto.setNombreproducto("Amoxicilina");
+        producto.setConcentracion("125");
+        producto.setId_unidadmedida("UNID-0005");
+        producto.setId_presentacion("PRE-00001");
+        producto.setPrecio_unitario("2.80");
+        producto.setStock_minimo("5");
         
         
-        if (productoDao.actualizarProducto(productocatunmpre)) {
+        if (productoDao.actualizarProducto(producto)) {
             System.out.println("Se modifico la cliente...");
             
         } else {
@@ -117,8 +120,6 @@ public void buscarDni(String dni){
     I.setEstado("1");
     I.setIdusuario("PERS-0001");
     p.setIdproducto("Prod-0306201516283906");
-    p.setLote("987603");
-    p.setFecha_vencimiento("03/07/2015");
     p.setIdlaboratorio("LAB-0001");
     p.setEstado("1");
     
@@ -143,8 +144,59 @@ public void buscarDni(String dni){
      UsuarioDao dao= new UsuarioDaoImpl();
      Usuario usuario= new Usuario();
      usuario=dao.mostrarUsuario("1");
-        System.out.println("id " +usuario.getIdusuario()+ "usuario"+usuario.getUsuario()+""+usuario.getPassword());
+        System.out.println("id"+usuario.getIdusuario()+ "usuario"+usuario.getUsuario()+""+usuario.getPassword());
      
     }
+    
+    public void buscarlote(){
+        IngresoDao dao= new IngresoDaoImpl();
+        int l=0;
+        l=dao.buscarLote("140813");
+        System.out.println("idlote:"+l);
+    }
+    
+    public void ejecutarprocedimiento(){
+        IngresoDao dao= new IngresoDaoImpl();
+        
+        String idlot="023";
+        String idlaboratorio="LAB-0005"; 
+                String idproducto="Prod-0706201520375351";
+                String precioingreso="2.30"; 
+                String cantidadunidades="12"; 
+                String descuento="0"; 
+               String idingreso="ING-1106201505074166"; 
+                String fecha_vencimiento="22/07/2018";
+      
+                        
+     if (dao.insertarcompra(idlot, idlaboratorio, idproducto, precioingreso, cantidadunidades, descuento, idingreso, fecha_vencimiento)) {
+            System.out.println("Se modifico la cliente...");
+            
+        } else {
+            System.out.println("No se modifico el cliente");
+        }
+    }
+    
+    public void ejecutarprocedimiento2(){
+        IngresoDao dao= new IngresoDaoImpl();
+        
+        String idlot="bg765";
+        String idlaboratorio="LAB-0001";                
+        String idproducto="Prod-0706201520375356";
+                String precioingreso="0.40"; 
+                String cantidadunidades="12"; 
+                String descuento="1"; 
+               String idingreso="ING-1706201506284633"; 
+                String fecha_vencimiento="22/07/2013";
+      
+                        
+     if (dao.actuIngreso(idlot,idlaboratorio,idproducto, precioingreso,cantidadunidades,descuento,idingreso,fecha_vencimiento)) {
+            System.out.println("Se modifico la cliente...");
+            
+        } else {
+            System.out.println("No se modifico el cliente");
+        }
+    }
 }
+
+ 
        

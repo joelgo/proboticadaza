@@ -14,6 +14,7 @@ public class Laboratorio  implements java.io.Serializable {
      private String estado;
 
     public Laboratorio() {
+        
     }
 
 	

@@ -12,17 +12,14 @@
             
             String idlaboratorio = request.getParameter("idlaboratorio");
             idlaboratorio = idlaboratorio == null ? "" : idlaboratorio;
-            out.println("idlaboratorio"+idlaboratorio);
+            
             
             String nombrelaboratorio=request.getParameter("nombrelaboratorio");
             nombrelaboratorio = nombrelaboratorio == null ? "" : nombrelaboratorio;
             String opcion=request.getParameter("opcion");
             opcion=opcion == null? "" : opcion;
- 
             String mensaje =""; 
-                     
-                
-                
+                            
                 
                 if(!nombrelaboratorio.equals("")){
                 laboratorio.setIdlaboratorio(idlaboratorio);

@@ -35,36 +35,43 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="bienvenido.jsp">Inicio</a>
+                        <a class="navbar-brand" href="bienvenido.jsp"><span class="glyphicon glyphicon-home"> Inicio</span></a>
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Registro<span class="caret"></span></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-list"> Registro</span><span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="reg_persona.jsp">Registro_Persona</a></li>
-                                    <li><a href="reg_producto.jsp">Registro_Producto</a></li>
-                                    <li><a href="reg_distribuidor.jsp">Registro_Distribuidor</a></li>
-                                    <li><a href="reg_distribuidor.jsp">Registro Ingreso de Producto</a></li>
-                                    <li><a href="reg_usuario.jsp">Registro_Usuario</a></li>
+                                    <li><a href="reg_persona.jsp">Registro_Persona</a></li>                                
+                                    <li><a href="crudPer?action=Buscar">Registro_Usuario</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Reporte<span class="caret"></span></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-option-vertical"> Reporte</span><span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li><a href="rep_producto.jsp">Reporte_Producto</a></li>
-                                    <li><a href="rep_productolotelab.jsp">Reporte de Producto por Lote y laboratorio</a></li>
-                                    <li><a href="rep_persona.jsp">Reporte_Persona</a></li>
-                                    <li><a href="rep_producto.jsp">Reporte_Distribuidor</a></li>
-                                    <li><a href="rep_laboratorio.jsp">Reporte_Laboratorio</a></li> 
+                                    <li><a href="rep_laboratorio.jsp">Reporte_Laboratorio</a></li>
+                                    <li><a href="rep_salida.jsp">Reportes</a></li>
                                 </ul>
                             </li> 
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Registro de Compras<span class="caret"></span></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-shopping-cart"> Registro de Compras </span><span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="ingreso.jsp">Registro_Compra</a></li>
+                                    <li><a href="ocultar?action=reginreso">Registro_Compra</a></li>
                                 </ul>
                             </li> 
+                             <li class="dropdown">
+                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-pencil"> Registro de Salidas</span><span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="salida.jsp">Registro_Salida</a></li>
+                                </ul>
+                            </li>
+                              <li class="dropdown">
+                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-pencil">Modificador</span><span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="ocultar?action=mod">Modificador</a></li>
+                                </ul>
+                            </li>
                             <li><a href="cr.php"><span class="glyphicon glyphicon-off" aria-hidden="true"></span>Salir</a></li>
                         </ul>
                     </div><!--/.nav-collapse -->

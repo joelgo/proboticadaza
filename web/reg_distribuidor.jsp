@@ -8,7 +8,7 @@
             Distribuidor distribuidor = new Distribuidor();
             
              String iddistribuidor = request.getParameter("iddistribuidor"); iddistribuidor= iddistribuidor==null?"":iddistribuidor;
-             out.println(""+iddistribuidor);
+            
              String nombredis = request.getParameter("nombredis"); nombredis= nombredis==null?"":nombredis;
              String Direccion = request.getParameter("Direccion"); Direccion= Direccion==null?"":Direccion;
              String telefonoCelular = request.getParameter("telefonoCelular"); telefonoCelular= telefonoCelular==null?"":telefonoCelular;
@@ -54,7 +54,7 @@
         </tr>
         <tr>
             <td><label class="col-md-12">Telefono/Celular</label></td>
-            <td><input type="text" name="telefonoCelular" placeholder= "Telefono/Celular" class="form-control" ></td>
+<td><input type="text" name="telefonoCelular" placeholder= "Telefono/Celular" class="form-control" maxlength="10"></td>
         </tr>
         <tr>
             <td><label class="col-md-12">Correo</label></td>
@@ -69,7 +69,7 @@
         </tr>
          <tr>
             <td><label class="col-md-12">Ruc</label></td>
-            <td><input type="text" name="ruc" placeholder= "ruc" class="form-control" ></td>
+<td><input type="text" name="ruc" placeholder= "ruc" class="form-control" maxlength="15"></td>
         </tr>
         <tr>
             <td colspan="2"><label><%=mensaje%></label></td>

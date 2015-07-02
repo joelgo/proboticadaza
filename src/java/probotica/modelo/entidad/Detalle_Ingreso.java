@@ -12,12 +12,13 @@ package probotica.modelo.entidad;
 public class Detalle_Ingreso {
     
     private String idingreso;
-    private String idprlablot;
+    private String idlote;
+    private String idlaboratorio;
     private String idproducto;
     private String cantidad_unidades;
     private String precio_ingreso;
     private String descuento;
-    private String orden;
+    private String fecha_vencimiento;
     private String estado;
 
     public Detalle_Ingreso() {
@@ -31,12 +32,20 @@ public class Detalle_Ingreso {
         this.idingreso = idingreso;
     }
 
-    public String getIdprlablot() {
-        return idprlablot;
+    public String getIdlote() {
+        return idlote;
     }
 
-    public void setIdprlablot(String idprlablot) {
-        this.idprlablot = idprlablot;
+    public void setIdlote(String idlote) {
+        this.idlote = idlote;
+    }
+
+    public String getIdlaboratorio() {
+        return idlaboratorio;
+    }
+
+    public void setIdlaboratorio(String idlaboratorio) {
+        this.idlaboratorio = idlaboratorio;
     }
 
     public String getIdproducto() {
@@ -71,12 +80,12 @@ public class Detalle_Ingreso {
         this.descuento = descuento;
     }
 
-    public String getOrden() {
-        return orden;
+    public String getFecha_vencimiento() {
+        return fecha_vencimiento;
     }
 
-    public void setOrden(String orden) {
-        this.orden = orden;
+    public void setFecha_vencimiento(String fecha_vencimiento) {
+        this.fecha_vencimiento = fecha_vencimiento;
     }
 
     public String getEstado() {
@@ -87,5 +96,6 @@ public class Detalle_Ingreso {
         this.estado = estado;
     }
 
+   
       
 }

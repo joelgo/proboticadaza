@@ -1,6 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
-
+    <servlet>
+        <servlet-name>CrudPer</servlet-name>
+        <servlet-class>probotica.modelo.controlador.servlet.CrudPer</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CrudIngreso</servlet-name>
+        <servlet-class>probotica.modelo.controlador.servlet.CrudIngreso</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Ocultar</servlet-name>
+        <servlet-class>probotica.modelo.controlador.servlet.Ocultar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegIng</servlet-name>
+        <servlet-class>probotica.modelo.controlador.servlet.RegIng</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Close</servlet-name>
+        <servlet-class>probotica.modelo.controlador.servlet.Close</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Salidaa</servlet-name>
+        <servlet-class>probotica.modelo.controlador.servlet.Salidaa</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Reporte_sal</servlet-name>
+        <servlet-class>probotica.modelo.controlador.servlet.Reporte_sal</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CrudPer</servlet-name>
+        <url-pattern>/crudPer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CrudIngreso</servlet-name>
+        <url-pattern>/crudIngreso</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Ocultar</servlet-name>
+        <url-pattern>/ocultar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegIng</servlet-name>
+        <url-pattern>/regIng</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Close</servlet-name>
+        <url-pattern>/close</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Salidaa</servlet-name>
+        <url-pattern>/salidaa</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Reporte_sal</servlet-name>
+        <url-pattern>/reporte_sal</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             15

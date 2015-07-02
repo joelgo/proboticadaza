@@ -12,37 +12,25 @@ import java.sql.Date;
  * @author USUARIO
  */
 public class produc_lab_lote {
-    private String idprlablot;
-    private String lote;
+    
+    private String idlote;
     private String idlaboratorio;
     private String idproducto;
     private String Stock;
-    private String fecha_vencimiento;
     private String estado;
 
     public produc_lab_lote() {
+        
     }
-
     
-    
-    public String getIdprlablot() {
-        return idprlablot;
+
+    public String getIdlote() {
+        return idlote;
     }
 
-    public void setIdprlablot(String idprlablot) {
-        this.idprlablot = idprlablot;
+    public void setIdlote(String idlote) {
+        this.idlote = idlote;
     }
-
-   
-    
-    public String getLote() {
-        return lote;
-    }
-
-    public void setLote(String lote) {
-        this.lote = lote;
-    }
-
     public String getIdlaboratorio() {
         return idlaboratorio;
     }
@@ -66,19 +54,6 @@ public class produc_lab_lote {
     public void setStock(String Stock) {
         this.Stock = Stock;
     }
-
-    public String getFecha_vencimiento() {
-        return fecha_vencimiento;
-    }
-
-    public void setFecha_vencimiento(String fecha_vencimiento) {
-        this.fecha_vencimiento = fecha_vencimiento;
-    }
-
-   
-
- 
-
     public String getEstado() {
         return estado;
     }

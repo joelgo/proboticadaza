@@ -8,21 +8,18 @@ package probotica.modelo.controlador.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import probotica.modelo.dao.UsuarioDao;
-import probotica.modelo.dao.impl.UsuarioDaoImpl;
-import probotica.modelo.entidad.Usuario;
+import probotica.modelo.dao.SalidaDao;
+import probotica.modelo.dao.impl.SalidaDaoImpl;
+import probotica.modelo.entidad.Salida;
 
 /**
  *
- * @author USUARIO
+ * @author CARDENAS
  */
-@WebServlet(name = "Validar", urlPatterns = {"/vr.php"})
-public class Validar extends HttpServlet {
+public class Salidaa extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,33 +32,44 @@ public class Validar extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String usuario=request.getParameter("usuario"); usuario=usuario== null?"":usuario;
-        
-        String password=request.getParameter("password"); password=password== null?"": password;
-        String mensaje="Hola bebe";
-        String id="";
-        UsuarioDao dao = new UsuarioDaoImpl();
+ 
+
         
         
-        if (dao.validarDato(usuario,password)!=null) {
-          
-            // nos permite levantarr la sesion  
-            HttpSession session=request.getSession(); // nos permite para podder enviar la sesion
-            session.setAttribute("idusuario", dao.validarDato(usuario, password)); // poniendo en sesion el id del usuariooo
+        SalidaDao dao=new SalidaDaoImpl();
+        Salida salida =new Salida();
+        
+        String action=request.getParameter("action");
+        action=action==null?"": action;
+        
+        String idsalida=request.getParameter("idsalida");
+        idsalida=idsalida==null?"": idsalida;
+ 
+ 
+        
+        String idusuario=request.getParameter("idusuario");
+        idusuario=idusuario==null?"": idusuario;
+  
+            String mensaje = "";
+            
+        
+        if(!idusuario.equals("")){
+           
+            salida.setIdusuario(idusuario);
+            if(dao.isertarsalida(salida)){
+                
+             request.getRequestDispatcher("reg_salida.jsp").forward(request, response);           
+            }else{
+            mensaje="No se pudo registrar la salida";
+            }
             
             
-            
-            id=dao.validarDato(usuario, password);
-            request.setAttribute("usuario", dao.mostrarUsuario(id));// estamos setando un objeto un bean
-            
-            request.setAttribute("usuario",usuario);///seteo de atributos desde un formularioooooo o caja de texto.
-            request.setAttribute("dato", mensaje); // seteo de Atrinutoss de una varable cualquiera.. no recibida de un formulario
-            request.getRequestDispatcher("bienvenido.jsp").forward(request, response); // se tiene que añadir el request o responsi
-            
-            
-        } else {
-            request.getRequestDispatcher("error.jsp").forward(request, response);
         }
+        
+       if(action.equals("sali")){ 
+       request.getRequestDispatcher("salida.jsp").forward(request, response);    
+       }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -104,3 +112,6 @@ public class Validar extends HttpServlet {
     }// </editor-fold>
 
 }
+
+  
+

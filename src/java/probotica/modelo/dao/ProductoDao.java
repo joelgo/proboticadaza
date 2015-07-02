@@ -12,7 +12,9 @@ import probotica.modelo.entidad.Laboratorio;
 import probotica.modelo.entidad.Presentacion;
 import probotica.modelo.entidad.Producto;
 import probotica.modelo.entidad.ProductoCatUnmPre;
+import probotica.modelo.entidad.Producto_lab;
 import probotica.modelo.entidad.UnidadMedida;
+import probotica.modelo.entidad.listproing;
 
 /**
  *
@@ -26,6 +28,11 @@ import probotica.modelo.entidad.UnidadMedida;
  public boolean modificarLaboratorio(Laboratorio laboratorio);
  public List<ProductoCatUnmPre> listarProdCatUniPresen();
  public boolean desactivarProducto(Producto producto);
- public boolean actualizarProducto(ProductoCatUnmPre productocatunmpre);
+ public boolean actualizarProducto(Producto producto);
+public List<Producto_lab> listarProducto();
+ public List<Producto> listProducto();
+public boolean reglaboratori(Laboratorio laboratorio1);
+
+
 }
 

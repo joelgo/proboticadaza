@@ -16,7 +16,7 @@
                         String idlaboratorio = request.getParameter("idlaboratorio");
                         idlaboratorio = idlaboratorio == null ? "" : idlaboratorio;
                         
-                        out.println("idlaboratorio"+idlaboratorio);
+                        
                         
                         Laboratorio laboratorio = new Laboratorio();
                         laboratorio.setIdlaboratorio(idlaboratorio);

@@ -36,6 +36,4 @@ public interface ProboticaDao {
  public List<Producto> listarproducto();
  public boolean eliminarLaboratorio(Laboratorio laboratorio);
  public Producto buscarproducto(String idproducto);
- public boolean actualizarLaboratorio(Laboratorio laboratorio);
- 
 }

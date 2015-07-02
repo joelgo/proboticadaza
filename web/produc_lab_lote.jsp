@@ -53,16 +53,12 @@
                  Date fechaVencimiento = new SimpleDateFormat("dd/MM/yyyy").parse(fecha_vencimiento);
                  
                  produc_lab_lote.setIdproducto(idproducto);
-                 produc_lab_lote.setLote(lote);
+                 
                  produc_lab_lote.setIdlaboratorio(idlaboratorio);
                  produc_lab_lote.setStock(Stock);
-                 produc_lab_lote.setFecha_vencimiento(fecha_vencimiento);
+                 
                  produc_lab_lote.setEstado(estado);
-                 
-                
-                 
-                 
-                 
+   
                  if (dao.registrarProducto(producto)) {
                     response.sendRedirect("Producto.jsp");
                 } else {

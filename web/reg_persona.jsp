@@ -6,55 +6,14 @@
 <!--<nav class="geme">
   
 <!--<form action="registro" method="Post">-->
-<%
-            ProboticaDao dao = new ProboticaDaoImpl();
-            Persona persona = new Persona();
-            
-             String idPersona = request.getParameter("idPersona"); idPersona= idPersona==null?"":idPersona;
-             out.println(""+idPersona);
-             String nombre = request.getParameter("nombre"); nombre= nombre==null?"":nombre;
-             out.println(""+nombre);
-             String apellidoPat = request.getParameter("apellidoPat"); apellidoPat= apellidoPat==null?"":apellidoPat;
-             out.println(""+apellidoPat);
-             String apellidoMat = request.getParameter("apellidoMat"); apellidoMat= apellidoMat==null?"":apellidoMat;
-             out.println(""+apellidoPat);
-             String dni = request.getParameter("dni"); dni= dni==null?"":dni;
-             out.println(""+dni);
-             String genero = request.getParameter("genero"); genero= genero==null?"":genero;
-             out.println(""+genero);
-             String direccion = request.getParameter("direccion"); direccion= direccion==null?"":direccion;
-              out.println(""+direccion);
-             String telef_celular=request.getParameter("telef_celular"); telef_celular=telef_celular==null?"":telef_celular;
-             out.println(""+telef_celular);
-             
-             String mensaje = "";
-             
-             if(!nombre.equals("") & !apellidoPat.equals("") & !apellidoMat.equals("") & !dni.equals("") & !genero.equals("") & !direccion.equals("")){
-                 persona.setIdpersona("");
-                 persona.setNombre(nombre);
-                 persona.setApellidoPat(apellidoPat);
-                 persona.setApellidoMat(apellidoMat);
-                 persona.setDni(dni);
-                 persona.setGenero(genero);
-                 persona.setDireccion(direccion);
-                 persona.setTelefonoCelular(telef_celular);
 
-                 if(dao.registarPersona(persona)){
-                     response.sendRedirect("reg_persona.jsp");
-                 }else{
-                     mensaje ="No se pudo registrar al Asistente";
-                 }
-             }
-             
-             
-        
-        %>
-
+<jsp:useBean id="mensaje" scope="request" class="java.lang.String" />
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-3 col-md-3"></div>
                 <div class="col-xs-12 col-sm-6 col-md-6 well">
-<form action=" reg_persona.jsp " method="post" class="form-horizontal">
+  <form method="POST" action="crudPer">
+            <input type="hidden" name="action" value="insertar">
     <table class="table table-condensed">
         <tr>
             <td><label class="col-md-12">Nombre</label></td>
@@ -70,7 +29,7 @@
         </tr>
         <tr>
             <td><label class="col-md-12">Dni</label></td>
-            <td><input type="text" name="dni" placeholder= "Dni" class="form-control" ></td>
+<td><input type="text" name="dni" placeholder= "Dni" class="form-control" maxlength="8"></td>
         </tr>
         <tr>
             <td><label class="col-md-12">Genero</label></td>
@@ -87,7 +46,7 @@
         </tr>
         
         <td><label class="col-md-12">telef/celular:</label></td>
-            <td><input type="text" name="telef_celular" placeholder= "telef_celular" class="form-control" ></td>
+ <td><input type="text" name="telef_celular" placeholder= "telef_celular" class="form-control" maxlength="10"></td>
         
         <tr>
             <td colspan="2"><label><%=mensaje%></label></td>
